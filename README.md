@@ -1,13 +1,17 @@
-# Idle RPG Online V2
-Node.js + SQLite + WebSocket.
+# Idle RPG Online V3
+Versão completa de navegador: mapa, movimentação, 5 classes, monstros, chefe, combate, habilidades, níveis, inventário, loja, raridades, PvP, ranking, chat e WebSocket.
 
-Inclui cadastro/login, salvamento por jogador, 5 heróis, combate idle, inventário/equipamentos, itens com raridades, PvP automático, rating, ranking global, chat global e contador online.
+## Render
+Build Command: `npm install`
+Start Command: `npm start`
+Root Directory: vazio
 
-## Rodar
-Node.js 20+
-npm install
-npm start
-Abra http://localhost:3000
+O projeto não usa pasta `public`: `index.html` fica na raiz.
+O servidor usa `PORT` e `0.0.0.0` e corrige o wildcard do Express 5.
 
-## VPS
-Configure JWT_SECRET com uma chave longa e PORT=3000. Use HTTPS/reverse proxy em produção.
+## Local
+`npm install`
+`npm start`
+Depois abra `http://localhost:3000`
+
+Observação: SQLite em hospedagem com armazenamento efêmero é adequado para teste. Para produção, migre para PostgreSQL.
