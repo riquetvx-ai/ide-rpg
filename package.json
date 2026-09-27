@@ -1,15 +1,7 @@
 {
-  "name": "idle-rpg-online-v3",
-  "version": "3.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^5.1.0",
-    "better-sqlite3": "^12.2.0",
-    "bcryptjs": "^3.0.2",
-    "jsonwebtoken": "^9.0.2",
-    "ws": "^8.18.3"
-  }
+  "name":"idle-rpg-online-v6",
+  "version":"6.0.0",
+  "private":true,
+  "scripts":{"start":"node server.js"},
+  "dependencies":{"express":"^5.1.0","bcryptjs":"^3.0.2","jsonwebtoken":"^9.0.2","ws":"^8.18.3"}
 }
