@@ -1,17 +1,11 @@
-# Idle RPG Online V3
-Versão completa de navegador: mapa, movimentação, 5 classes, monstros, chefe, combate, habilidades, níveis, inventário, loja, raridades, PvP, ranking, chat e WebSocket.
+# Idle RPG Online V4 — Visual MMORPG
+
+Atualização focada no combate visual: personagem, monstros, mapa, ataque, dano, crítico, HP, XP, níveis, áreas, outros jogadores e chat.
 
 ## Render
-Build Command: `npm install`
-Start Command: `npm start`
-Root Directory: vazio
+- Build Command: `npm install`
+- Start Command: `npm start`
+- Root Directory: deixe vazio
+- Node: automático
 
-O projeto não usa pasta `public`: `index.html` fica na raiz.
-O servidor usa `PORT` e `0.0.0.0` e corrige o wildcard do Express 5.
-
-## Local
-`npm install`
-`npm start`
-Depois abra `http://localhost:3000`
-
-Observação: SQLite em hospedagem com armazenamento efêmero é adequado para teste. Para produção, migre para PostgreSQL.
+`index.html` fica na raiz do projeto.

@@ -81,13 +81,9 @@ app.post("/api/login",async(req,res)=>{
 app.get("/api/me",auth,(req,res)=>res.json(pub(get(req.user.id))));
 app.post("/api/save",auth,(req,res)=>{
  const u=get(req.user.id),b=req.body;
- db.prepare(`UPDATE users SET gold=?,level=?,xp=?,damage=?,defense=?,hp=?,maxhp=?,mana=?,maxmana=?,
- stage=?,map=?,x=?,y=?,hero=?,skillpoints=?,wins=?,losses=?,rating=?,equipment=?,inventory=? WHERE id=?`)
- .run(...["gold","level","xp","damage","defense","hp","maxhp","mana","maxmana","stage","x","y","skillpoints","wins","losses","rating"]
- .map(k=>Number.isFinite(Number(b[k]))?Math.floor(Number(b[k])):u[k]),
- String(b.map||u.map),String(b.hero&&classes[b.hero]?b.hero:u.hero),
- JSON.stringify(Array.isArray(b.equipment)?b.equipment:parse(u.equipment,[])),
- JSON.stringify(Array.isArray(b.inventory)?b.inventory:parse(u.inventory,[])),u.id);
+ const n=k=>Number.isFinite(Number(b[k]))?Math.floor(Number(b[k])):u[k];
+ db.prepare(`UPDATE users SET gold=?,level=?,xp=?,damage=?,defense=?,hp=?,maxhp=?,mana=?,maxmana=?,stage=?,map=?,x=?,y=?,hero=?,skillpoints=?,wins=?,losses=?,rating=?,equipment=?,inventory=? WHERE id=?`)
+ .run(n("gold"),n("level"),n("xp"),n("damage"),n("defense"),n("hp"),n("maxhp"),n("mana"),n("maxmana"),n("stage"),String(b.map||u.map),n("x"),n("y"),String(b.hero&&classes[b.hero]?b.hero:u.hero),n("skillpoints"),n("wins"),n("losses"),n("rating"),JSON.stringify(Array.isArray(b.equipment)?b.equipment:parse(u.equipment,[])),JSON.stringify(Array.isArray(b.inventory)?b.inventory:parse(u.inventory,[])),u.id);
  res.json(pub(get(u.id)))});
 
 app.get("/api/ranking",(q,s)=>s.json(db.prepare("SELECT username,hero,level,stage,wins,losses,rating FROM users ORDER BY rating DESC,level DESC LIMIT 50").all()));
