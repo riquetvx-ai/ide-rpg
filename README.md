@@ -1,18 +1,10 @@
-# Idle RPG Online V9
-MMORPG de navegador em HTML5 Canvas + Node.js/Express/WebSocket.
+# Idle RPG Online V10 — Mundo MMORPG
+
+Versão consolidada para navegador com cidade, NPCs, lojas, quests, portais, 8 zonas, monstros, chefes, loot, equipamentos visíveis no sistema de atributos, habilidades, ranking, chat e multiplayer via WebSocket.
 
 ## Render
-Build Command: `npm install`
-Start Command: `npm start`
-Root Directory: deixe vazio.
+- Build: `npm install`
+- Start: `npm start`
+- Root Directory: vazio
 
-O `index.html` fica na raiz. O servidor usa `PORT` e `0.0.0.0`.
-
-## V9
-Mapa grande, 5 classes, monstros, combate visual, auto ataque, habilidades, níveis, XP, loot, inventário, equipamento, loja, NPC/quests, PvP local, ranking, chat e jogadores online via WebSocket.
-
-Os dados de contas são gravados em `players.json`. Em Render Free o disco é efêmero; para produção, troque por PostgreSQL/DB persistente.
-
-
-## V9
-Visual de personagens e monstros aprimorado, com armaduras, armas, silhuetas e inimigos diferenciados por nível.
+O `index.html` fica na raiz.
