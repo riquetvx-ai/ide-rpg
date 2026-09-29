@@ -11,8 +11,8 @@ app.post('/api/login',async(req,res)=>{const username=String(req.body.username||
 app.get('/api/player',auth,(req,res)=>res.json(clean(players[req.user.username])));
 app.post('/api/save',auth,(req,res)=>{const p=players[req.user.username];if(!p)return res.status(404).end();const b=req.body||{};for(const k of ['level','xp','gold','hero','hp','mp','inventory','equipment','skills','quests','wins','losses'])if(b[k]!==undefined)p[k]=b[k];persist();res.json({ok:true,player:clean(p)})});
 app.get('/api/ranking',(req,res)=>res.json(Object.values(players).map(clean).sort((a,b)=>b.level-a.level||b.xp-a.xp||b.wins-a.wins).slice(0,30)));
-app.get('/api/health',(req,res)=>res.json({ok:true,version:'10.0.0',online:wss.clients.size}));
+app.get('/api/health',(req,res)=>res.json({ok:true,version:'13.0.0',online:wss.clients.size}));
 app.get(/.*/,(req,res)=>res.sendFile(path.join(__dirname,'index.html')));
 const online=new Map();function broadcast(obj,except){const s=JSON.stringify(obj);for(const c of wss.clients)if(c!==except&&c.readyState===WebSocket.OPEN)c.send(s)}
 wss.on('connection',ws=>{let name='Anônimo';ws.on('message',raw=>{try{const m=JSON.parse(raw);if(m.type==='join'){name=String(m.name||'Anônimo').slice(0,20);online.set(ws,{name,x:Number(m.x)||0,y:Number(m.y)||0,hero:String(m.hero||'Arkan')});broadcast({type:'online',count:wss.clients.size,players:[...online.values()]})}else if(m.type==='pos'){const o=online.get(ws);if(o){o.x=Number(m.x)||0;o.y=Number(m.y)||0;o.hero=String(m.hero||o.hero);broadcast({type:'pos',name:o.name,x:o.x,y:o.y,hero:o.hero},ws)}}else if(m.type==='chat'){const text=String(m.text||'').trim().slice(0,180);if(text)broadcast({type:'chat',name,text},null)}}catch{}});ws.on('close',()=>{online.delete(ws);broadcast({type:'online',count:wss.clients.size,players:[...online.values()]})})});
-const PORT=Number(process.env.PORT||3000);server.listen(PORT,'0.0.0.0',()=>console.log('Idle RPG Online V10 ativo na porta '+PORT));
+const PORT=Number(process.env.PORT||3000);server.listen(PORT,'0.0.0.0',()=>console.log('Idle RPG Online V13 ativo na porta '+PORT));

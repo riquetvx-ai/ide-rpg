@@ -1,10 +1,8 @@
-# Idle RPG Online V11 — Mundo MMORPG
+# Idle RPG Online V14 — Evolução de Equipamentos
 
-V11 focada em apresentação MMORPG: câmera seguindo o personagem, terreno em perspectiva diagonal/isométrica, cidade visual com casas e praça, mapas maiores, personagens/monstros mais detalhados, combate visual, NPCs, quests, lojas, portais, chefes, chat, ranking e salvamento.
+V14 mantém a V13 e adiciona evolução de equipamentos de +1 até +9, custos crescentes, bônus por faixa, efeitos visuais e inventário atualizado.
 
 ## Render
-- Build Command: `npm install`
-- Start Command: `npm start`
-- Root Directory: vazio
-
-A V11 mantém a base da V10 e usa os mesmos endpoints do servidor.
+Build: npm install
+Start: npm start
+Root Directory: vazio
