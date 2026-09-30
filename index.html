@@ -2,7 +2,7 @@
 *{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#07111b;color:#eaf2ff;font-family:Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}.hidden{display:none!important}.screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 20%,#173d57,#07111b 65%)}.panel{background:rgba(9,18,29,.94);border:1px solid #31506b;border-radius:16px;box-shadow:0 20px 70px #000b;padding:24px;width:min(430px,92vw)}h1{margin:0 0 6px;font-size:28px}h2{margin:0 0 14px}.muted{color:#9fb2c7;font-size:13px}.field{width:100%;padding:12px;margin:7px 0;border-radius:10px;border:1px solid #38536b;background:#101f2d;color:white}.primary{width:100%;padding:12px;border:0;border-radius:10px;background:#3f9cff;color:white;font-weight:bold;margin-top:8px}.ghost{padding:9px 12px;border-radius:9px;border:1px solid #38536b;background:#142536;color:#dbe9f8}.danger{background:#5b2630}.tabs{display:flex;gap:7px;margin-top:10px}.tabs button{flex:1}.error{color:#ff7d7d;min-height:20px;margin:5px 0}.game{position:fixed;inset:0;background:#08131c}.top{position:absolute;z-index:10;left:0;right:0;top:0;height:72px;background:linear-gradient(#08131eef,#08131ec8);display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid #294458}.heroName{min-width:105px}.bar{width:150px;height:12px;border-radius:9px;background:#172637;overflow:hidden}.bar i{display:block;height:100%;width:100%;background:#e74c55}.mp i{background:#3e8cff}.xp i{background:#a56dff}.stats{font-size:12px}.topBtns{margin-left:auto;display:flex;gap:6px}.canvasWrap{position:absolute;inset:72px 0 0}.canvasWrap canvas{width:100%;height:100%;display:block;image-rendering:auto}.leftpanel{position:absolute;z-index:9;left:10px;top:82px;width:190px;background:#091725cc;border:1px solid #29465b;border-radius:12px;padding:10px}.rightpanel{position:absolute;z-index:9;right:10px;top:82px;width:230px;background:#091725dd;border:1px solid #29465b;border-radius:12px;padding:10px;max-height:calc(100% - 92px);overflow:auto}.title{font-weight:bold;margin-bottom:7px}.row{display:flex;justify-content:space-between;gap:6px;padding:5px 0;border-bottom:1px solid #183043;font-size:12px}.pill{display:inline-block;padding:3px 7px;border-radius:99px;background:#172c3f;font-size:11px}.skill{display:flex;justify-content:space-between;align-items:center;padding:7px;border:1px solid #28475e;border-radius:9px;margin:5px 0;background:#0e2030}.skill button{padding:5px 8px}.chat{position:absolute;z-index:12;left:10px;bottom:10px;width:min(330px,75vw);background:#07131ed9;border:1px solid #29465b;border-radius:12px;padding:7px}.messages{height:105px;overflow:auto;font-size:12px;margin-bottom:5px}.chat form{display:flex;gap:5px}.chat input{min-width:0;flex:1;padding:8px;border-radius:8px;border:1px solid #365268;background:#0d1e2d;color:#fff}.mobile{position:absolute;z-index:11;right:14px;bottom:15px;display:grid;grid-template-columns:55px 55px 55px;gap:5px}.mobile button{height:48px;border-radius:12px;border:1px solid #54718a;background:#102437cc;color:white;font-size:20px}.mobile .blank{visibility:hidden}.toast{position:absolute;z-index:30;left:50%;top:85px;transform:translateX(-50%);background:#0c1c2b;color:#fff;border:1px solid #42617a;border-radius:12px;padding:9px 14px;opacity:0;transition:.2s;pointer-events:none}.toast.show{opacity:1}.modal{position:absolute;z-index:40;inset:0;background:#0009;display:flex;align-items:center;justify-content:center}.modal .box{width:min(520px,92vw);max-height:82vh;overflow:auto;background:#0b1724;border:1px solid #34536a;border-radius:15px;padding:17px}.inventoryGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.item{min-height:70px;position:relative;border:1px solid #2c4a60;border-radius:9px;background:#112435;padding:6px;font-size:11px}.item button{width:100%;font-size:10px;margin-top:5px}.rare{color:#a8d8ff}.epic{color:#d69cff}.legend{color:#ffc75b}.close{float:right}.quest{padding:9px;border:1px solid #29465b;border-radius:9px;margin:7px 0}.npcmark{color:#ffd65a}.bossmark{color:#ff7777}@media(max-width:760px){.leftpanel{display:none}.rightpanel{width:205px;top:80px;right:6px}.top{height:72px;padding:6px}.bar{width:95px}.heroName{min-width:82px}.chat{bottom:7px}.mobile{right:7px;bottom:120px}.topBtns button{padding:7px}.stats{font-size:10px}}
 
 /* V8 visual/mobile overhaul */
-.game{background:#07131b}.canvasWrap{inset:72px 0 0}
+.game{background:radial-gradient(circle at 50% 35%,#173b28,#07131b 78%)}.canvasWrap{inset:72px 0 0}
 .top{backdrop-filter:blur(8px);box-shadow:0 4px 22px #0008}.topBtns .desktopBtn{display:inline-flex}
 .actionDock{position:absolute;z-index:15;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:7px;padding:7px;background:#07131ed9;border:1px solid #34536a;border-radius:16px;box-shadow:0 10px 35px #0008}
 .actionDock button{min-width:52px;height:46px;border-radius:11px;border:1px solid #42627b;background:#11273a;color:#fff;font-size:18px}.actionDock .attackBtn{background:#2e83e8;font-weight:bold;min-width:118px}
@@ -18,15 +18,18 @@
 
 <style>
 /* V11 MMORPG visual layer */
-.canvasWrap{inset:72px 0 0;background:#0b1711;overflow:hidden}
+.canvasWrap{inset:72px 0 0;background:linear-gradient(#2c7446,#16442c);overflow:hidden}
 .canvasWrap canvas{touch-action:none}
 .combatInfo{backdrop-filter:blur(10px);box-shadow:0 12px 35px #0008}
 .top{box-shadow:0 5px 24px #0009}
 @media(max-width:760px){.combatInfo{top:78px;min-width:190px}.actionDock{bottom:9px}}
+
+/* V16 MMORPG polish */
+.worldGlow{position:absolute;inset:72px 0 0;pointer-events:none;z-index:2;background:radial-gradient(circle at 50% 45%,rgba(255,230,150,.10),transparent 42%),linear-gradient(180deg,rgba(255,255,255,.04),transparent 30%,rgba(0,0,0,.16));mix-blend-mode:screen}
 </style></style></head><body>
 <div id="auth" class="screen"><div class="panel"><h1>⚔️ Idle RPG Online</h1><div class="muted">V11 • Mundo MMORPG</div><div class="tabs"><button id="loginTab" class="ghost">Entrar</button><button id="regTab" class="ghost">Criar conta</button></div><input id="user" class="field" placeholder="Usuário"><input id="pass" type="password" class="field" placeholder="Senha"><div id="authErr" class="error"></div><button id="authBtn" class="primary">Entrar</button><div class="muted" style="margin-top:12px">Use uma conta de teste ou crie a sua. O jogo salva seu progresso no servidor.</div></div></div>
 <div id="game" class="game hidden"><div class="top"><div class="heroName"><b id="name"></b><div class="stats" id="level"></div></div><div><div class="stats">HP <span id="hpText"></span></div><div class="bar"><i id="hpBar"></i></div><div class="stats">MP <span id="mpText"></span></div><div class="bar mp"><i id="mpBar"></i></div></div><div><div class="stats">XP <span id="xpText"></span></div><div class="bar xp"><i id="xpBar"></i></div></div><div class="topBtns"><button class="ghost menuBtn" onclick="toggleSide()">☰</button><button class="ghost desktopBtn" onclick="openModal('inv')">🎒</button><button class="ghost desktopBtn" onclick="openModal('skills')">✨</button><button class="ghost desktopBtn" onclick="openModal('quests')">📜</button><button class="ghost desktopBtn" onclick="openModal('rank')">🏆</button><button class="ghost desktopBtn" onclick="openModal('world')">🌍</button><button class="ghost desktopBtn" onclick="openModal('shop')">🛒</button><button class="ghost" onclick="saveGame()">💾</button><button class="ghost danger" onclick="logout()">Sair</button></div></div>
-<div class="canvasWrap"><canvas id="c"></canvas></div><div class="leftpanel"><div class="title">🌍 Mundo</div><div class="row"><span>Zona</span><b id="zone">Vila Inicial</b></div><div class="row"><span>Ouro</span><b id="gold">500</b></div><div class="row"><span>Alvos</span><b id="target">Nenhum</b></div><div class="row"><span>Online</span><b id="online">1</b></div><div class="row"><span>Quest</span><b id="questMini">0/10</b></div><div style="margin-top:8px" class="muted">Explore a cidade, fale com NPCs, aceite quests, compre equipamentos e use os portais para avançar.</div><div class="worldQuick"><button class="ghost" onclick="openModal('npc')">🧙 NPCs</button><button class="ghost" onclick="openModal('shop')">🛒 Loja</button><button class="ghost" onclick="openModal('quests')">📜 Quests</button></div></div>
+<div class="canvasWrap"><canvas id="c"></canvas></div><div class="worldGlow"></div><div class="leftpanel"><div class="title">🌍 Mundo</div><div class="row"><span>Zona</span><b id="zone">Vila Inicial</b></div><div class="row"><span>Ouro</span><b id="gold">500</b></div><div class="row"><span>Alvos</span><b id="target">Nenhum</b></div><div class="row"><span>Online</span><b id="online">1</b></div><div class="row"><span>Quest</span><b id="questMini">0/10</b></div><div style="margin-top:8px" class="muted">Explore a cidade, fale com NPCs, aceite quests, compre equipamentos e use os portais para avançar.</div><div class="worldQuick"><button class="ghost" onclick="openModal('npc')">🧙 NPCs</button><button class="ghost" onclick="openModal('shop')">🛒 Loja</button><button class="ghost" onclick="openModal('quests')">📜 Quests</button></div></div>
 <div class="rightpanel" id="side"><button class="ghost" style="float:right" onclick="toggleSide()">✕</button><div class="title">⚡ Ações</div><button class="primary" onclick="toggleAuto()" id="autoBtn">▶ Auto ataque</button><button class="ghost" style="width:100%;margin-top:6px" onclick="drinkPotion()">🧪 Poção (+60 HP)</button><div class="title" style="margin-top:13px">👤 Personagem</div><div class="row"><span>Classe</span><b id="className">Guerreiro</b></div><div class="row"><span>ATK</span><b id="atk"></b></div><div class="row"><span>DEF</span><b id="def"></b></div><div class="row"><span>Crítico</span><b id="crit"></b></div><div class="title" style="margin-top:13px">🗺️ Teleporte</div><div id="zones"></div><div class="title" style="margin-top:13px">⚔ Habilidades</div><div id="skillMini"></div></div>
 <div class="chat"><div class="messages" id="messages"></div><form onsubmit="sendChat(event)"><input id="chatInput" placeholder="Mensagem global..."><button class="ghost">Enviar</button></form></div><div class="combatInfo" id="combatInfo"><b id="combatName">Nenhum alvo</b><div class="targetBar"><i id="combatHp"></i></div><span id="combatAction" class="muted">Toque em um monstro para atacar</span></div><div class="actionDock"><button class="attackBtn" onclick="interact()">⚔ Atacar</button><button onclick="castCurrent()">✨</button><button onclick="drinkPotion()">🧪</button><button onclick="openModal('inv')">🎒</button></div>
 <div class="mobile"><button class="blank"></button><button onclick="move(0,-1)">▲</button><button class="blank"></button><button onclick="move(-1,0)">◀</button><button onclick="interact()">⚔</button><button onclick="move(1,0)">▶</button><button class="blank"></button><button onclick="move(0,1)">▼</button><button class="blank"></button></div><div id="toast" class="toast"></div><div id="modal" class="modal hidden"><div class="box"><button class="ghost close" onclick="closeModal()">✕</button><div id="modalContent"></div></div></div></div>
@@ -133,11 +136,11 @@ function draw(){
  // isometric ground grid / tiles
  for(let gx=-7;gx<=7;gx++) for(let gy=-7;gy<=7;gy++){
    const wx=Math.floor(state.x/120)*120+gx*120,wy=Math.floor(state.y/120)*120+gy*120;
-   const c=(gx+gy)&1?'rgba(255,255,255,.028)':'rgba(0,0,0,.035)';
+   const c=(gx+gy)&1?'rgba(255,255,255,.010)':'rgba(0,0,0,.018)';
    isoPoly([[wx,wy],[wx+120,wy],[wx+120,wy+120],[wx,wy+120]],c,'rgba(220,240,210,.035)');
  }
  drawFieldDetails(z.kind);
- if(z.kind==='city') drawCity();
+ if(z.kind==='city'){ drawCity(); drawCityPath(); }
  // environmental props around the moving camera
  for(let i=-5;i<=7;i++){const wx=Math.floor(state.x/180)*180+i*180;const wy=Math.floor(state.y/140)*140+((i*97)%280);const p=worldToScreen(wx,wy);ctx.save();ctx.globalAlpha=.92;drawTree(p[0],p[1]);ctx.restore()}
  for(let i=-3;i<=8;i++){const wx=Math.floor(state.x/220)*220+i*220+60,wy=Math.floor(state.y/170)*170+((i*71)%240);const p=worldToScreen(wx,wy);drawRock(p[0],p[1])}
@@ -152,14 +155,41 @@ function draw(){
  state.particles.forEach(p=>{const sc=worldToScreen(p.x,p.y);ctx.globalAlpha=Math.max(0,p.life);ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(sc[0],sc[1],3+3*p.life,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1});
  state.floats.forEach(f=>{const sc=worldToScreen(f.x,f.y);ctx.globalAlpha=Math.max(0,f.life);ctx.fillStyle=f.crit?'#ffd45c':'#fff';ctx.font=(f.crit?'bold 18px':'bold 14px')+' Arial';ctx.textAlign='center';ctx.shadowColor='#000';ctx.shadowBlur=4;ctx.fillText(f.text,sc[0],sc[1]);ctx.shadowBlur=0;ctx.globalAlpha=1});
  ctx.fillStyle='#fff';ctx.font='bold 15px Arial';ctx.textAlign='center';ctx.shadowColor='#000';ctx.shadowBlur=5;ctx.fillText(z.name,W/2,25);ctx.shadowBlur=0;ctx.textAlign='left';
+ // V15 atmospheric lighting: warm center, darker edges, subtle depth
+ const glow=ctx.createRadialGradient(W*.52,H*.48,40,W*.52,H*.48,Math.max(W,H)*.72);
+ glow.addColorStop(0,'rgba(255,236,164,.07)');glow.addColorStop(.55,'rgba(40,80,60,0)');glow.addColorStop(1,'rgba(0,0,0,.30)');ctx.fillStyle=glow;ctx.fillRect(0,0,W,H);
+}
+function drawCityPath(){
+ ctx.save();
+ const pts=[[150,430],[260,380],[370,330],[500,290],[650,260]];
+ ctx.strokeStyle='#c9b68b';ctx.lineWidth=44;ctx.lineCap='round';ctx.beginPath();
+ pts.forEach((q,i)=>i?ctx.lineTo(...worldToScreen(q[0],q[1])):ctx.moveTo(...worldToScreen(q[0],q[1])));ctx.stroke();
+ ctx.strokeStyle='#e5d2a8';ctx.lineWidth=34;ctx.beginPath();pts.forEach((q,i)=>i?ctx.lineTo(...worldToScreen(q[0],q[1])):ctx.moveTo(...worldToScreen(q[0],q[1])));ctx.stroke();
+ ctx.fillStyle='#8f8064';for(let i=0;i<9;i++){const q=pts[Math.min(pts.length-1,Math.floor(i/2))];const p=worldToScreen(q[0]+(i%2)*30-15,q[1]+(i%3)*18-18);ctx.beginPath();ctx.ellipse(p[0],p[1],7,3,0,0,Math.PI*2);ctx.fill();}
+ ctx.restore();
 }
 function drawNPCWorld(x,y,icon,name){const p=worldToScreen(x,y);drawNPC(p[0],p[1],icon,name)}
 function drawPortalWorld(x,y){const p=worldToScreen(x,y);drawPortal(p[0],p[1])}
 function drawMonsterAt(x,y,m){const ox=m.x,oy=m.y;m._sx=x;m._sy=y+Math.sin(performance.now()/260+m.id)*2.5;drawMonster(m);delete m._sx;delete m._sy;}
 function drawNPC(x,y,icon,name){ctx.save();ctx.translate(x,y);ctx.fillStyle='#0008';ctx.beginPath();ctx.ellipse(0,27,22,7,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#7b5bd6';ctx.fillRect(-13,-5,26,28);ctx.fillStyle='#f0c9a8';ctx.beginPath();ctx.arc(0,-15,13,0,Math.PI*2);ctx.fill();ctx.font='22px Arial';ctx.textAlign='center';ctx.fillText(icon,0,-25);ctx.fillStyle='#ffd45c';ctx.font='bold 11px Arial';ctx.shadowColor='#000';ctx.shadowBlur=4;ctx.fillText(name,0,-43);ctx.shadowBlur=0;ctx.restore()}
 function drawPortal(x,y){ctx.save();ctx.translate(x,y);ctx.strokeStyle='#75d9ff';ctx.lineWidth=5;ctx.shadowBlur=18;ctx.shadowColor='#75d9ff';ctx.beginPath();ctx.ellipse(0,0,25,35,0,0,Math.PI*2);ctx.stroke();ctx.shadowBlur=0;ctx.fillStyle='#75d9ff';ctx.font='bold 10px Arial';ctx.textAlign='center';ctx.fillText('PORTAL',0,50);ctx.restore()}
-function drawTree(x,y){ctx.save();ctx.fillStyle='#06150b';ctx.beginPath();ctx.ellipse(x,y+25,27,10,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#6b452b';ctx.fillRect(x-7,y+4,14,24);ctx.fillStyle='#1c6633';ctx.beginPath();ctx.arc(x,y,29,0,Math.PI*2);ctx.arc(x-19,y+7,21,0,Math.PI*2);ctx.arc(x+19,y+7,22,0,Math.PI*2);ctx.fill();ctx.fillStyle='#45a951';ctx.beginPath();ctx.arc(x-10,y-10,13,0,Math.PI*2);ctx.arc(x+9,y-8,10,0,Math.PI*2);ctx.fill();ctx.fillStyle='#7dd35e';ctx.beginPath();ctx.arc(x-11,y-13,6,0,Math.PI*2);ctx.fill();ctx.restore()}
-function drawRock(x,y){ctx.save();ctx.fillStyle='#0007';ctx.beginPath();ctx.ellipse(x,y+7,13,5,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#53615c';ctx.beginPath();ctx.moveTo(x-12,y+5);ctx.lineTo(x-8,y-6);ctx.lineTo(x+3,y-11);ctx.lineTo(x+13,y-2);ctx.lineTo(x+9,y+7);ctx.closePath();ctx.fill();ctx.restore()}
+function drawTree(x,y){
+ ctx.save();
+ const g=ctx.createRadialGradient(x-9,y-12,4,x,y,40);g.addColorStop(0,'#72d45b');g.addColorStop(.45,'#2e914b');g.addColorStop(1,'#14532f');
+ ctx.fillStyle='#0007';ctx.beginPath();ctx.ellipse(x,y+30,31,11,0,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#70462c';ctx.beginPath();ctx.moveTo(x-7,y+2);ctx.lineTo(x-5,y+31);ctx.lineTo(x+8,y+31);ctx.lineTo(x+7,y+1);ctx.closePath();ctx.fill();
+ ctx.fillStyle='#8b5a36';ctx.fillRect(x-3,y+6,4,21);
+ ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y-1,31,0,Math.PI*2);ctx.arc(x-22,y+8,22,0,Math.PI*2);ctx.arc(x+22,y+8,23,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#8ae66a';ctx.beginPath();ctx.arc(x-11,y-13,8,0,Math.PI*2);ctx.arc(x+12,y-8,5,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#b6ef83';ctx.beginPath();ctx.arc(x-13,y-15,3.5,0,Math.PI*2);ctx.fill();
+ ctx.restore();
+}
+function drawRock(x,y){
+ ctx.save();ctx.fillStyle='#0006';ctx.beginPath();ctx.ellipse(x,y+8,16,6,0,0,Math.PI*2);ctx.fill();
+ const g=ctx.createLinearGradient(x-12,y-12,x+12,y+10);g.addColorStop(0,'#aab4b7');g.addColorStop(.5,'#68757a');g.addColorStop(1,'#39464c');ctx.fillStyle=g;
+ ctx.beginPath();ctx.moveTo(x-15,y+5);ctx.lineTo(x-9,y-8);ctx.lineTo(x+3,y-14);ctx.lineTo(x+15,y-4);ctx.lineTo(x+9,y+8);ctx.closePath();ctx.fill();
+ ctx.fillStyle='#d4dcdd';ctx.globalAlpha=.45;ctx.beginPath();ctx.moveTo(x-8,y-7);ctx.lineTo(x+3,y-13);ctx.lineTo(x+7,y-6);ctx.closePath();ctx.fill();ctx.restore();
+}
 function drawMonster(m){
  const sel=state.target===m, bob=Math.sin(performance.now()/260+m.id)*2.5, hit=m.hit>0;
  ctx.save();ctx.translate(m._sx??m.x,m._sy??m.y+bob);
@@ -171,29 +201,28 @@ function drawMonster(m){
  ctx.fillStyle='#1b2028';ctx.fillRect(-31,-46,62,6);ctx.fillStyle='#e34b53';ctx.fillRect(-31,-46,62*Math.max(0,m.hp/m.maxHp),6);ctx.restore();
 }
 function drawGoblin(m,hit){
- const c=hit?'#fff':'#5dbb65';
- ctx.fillStyle=c;ctx.beginPath();ctx.ellipse(0,3,25,28,0,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='#3c8148';ctx.beginPath();ctx.moveTo(-18,-14);ctx.lineTo(-31,-25);ctx.lineTo(-18,-23);ctx.lineTo(-10,-31);ctx.lineTo(-4,-18);ctx.lineTo(8,-29);ctx.lineTo(15,-18);ctx.lineTo(29,-25);ctx.lineTo(19,-8);ctx.closePath();ctx.fill();
- ctx.fillStyle='#ffd77b';ctx.beginPath();ctx.arc(-9,-2,6,0,Math.PI*2);ctx.arc(9,-2,6,0,Math.PI*2);ctx.fill();ctx.fillStyle='#20252a';ctx.beginPath();ctx.arc(-9,-2,2.5,0,Math.PI*2);ctx.arc(9,-2,2.5,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='#4a2f26';ctx.fillRect(-15,13,30,8);ctx.fillStyle='#fff';ctx.fillRect(-7,13,4,6);ctx.fillRect(3,13,4,6);
- ctx.strokeStyle='#6d4633';ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(-20,8);ctx.lineTo(-32,21);ctx.moveTo(20,8);ctx.lineTo(31,17);ctx.stroke();
+ const c=hit?'#fff':'#63c85c';ctx.save();
+ ctx.fillStyle=c;ctx.beginPath();ctx.ellipse(0,4,27,30,0,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#2e7c3c';ctx.beginPath();ctx.moveTo(-21,-13);ctx.lineTo(-35,-29);ctx.lineTo(-17,-25);ctx.lineTo(-10,-36);ctx.lineTo(-2,-20);ctx.lineTo(8,-34);ctx.lineTo(16,-23);ctx.lineTo(33,-28);ctx.lineTo(20,-8);ctx.closePath();ctx.fill();
+ ctx.fillStyle='#ffdf80';ctx.beginPath();ctx.arc(-10,-2,7,0,Math.PI*2);ctx.arc(10,-2,7,0,Math.PI*2);ctx.fill();ctx.fillStyle='#20252a';ctx.beginPath();ctx.arc(-9,-1,3,0,Math.PI*2);ctx.arc(9,-1,3,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#4b2925';ctx.beginPath();ctx.roundRect(-17,12,34,11,4);ctx.fill();ctx.fillStyle='#fff';ctx.fillRect(-10,13,5,7);ctx.fillRect(1,13,5,7);
+ ctx.strokeStyle='#5d3d2d';ctx.lineWidth=8;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(-22,7);ctx.lineTo(-38,22);ctx.moveTo(22,7);ctx.lineTo(38,21);ctx.stroke();
+ ctx.strokeStyle='#8fd76e';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-24,-3);ctx.lineTo(-29,-10);ctx.moveTo(24,-3);ctx.lineTo(29,-10);ctx.stroke();ctx.restore();
 }
 function drawOrc(m,hit){
- const c=hit?'#fff':'#8c5a42';
- ctx.fillStyle=c;ctx.beginPath();ctx.ellipse(0,4,30,31,0,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='#684333';ctx.beginPath();ctx.moveTo(-25,-13);ctx.lineTo(-34,-30);ctx.lineTo(-17,-23);ctx.lineTo(-9,-34);ctx.lineTo(0,-22);ctx.lineTo(10,-34);ctx.lineTo(18,-23);ctx.lineTo(34,-30);ctx.lineTo(25,-11);ctx.closePath();ctx.fill();
- ctx.fillStyle='#d9b276';ctx.beginPath();ctx.arc(-10,-2,7,0,Math.PI*2);ctx.arc(10,-2,7,0,Math.PI*2);ctx.fill();ctx.fillStyle='#151515';ctx.beginPath();ctx.arc(-10,-2,3,0,Math.PI*2);ctx.arc(10,-2,3,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='#2e2220';ctx.beginPath();ctx.moveTo(-13,14);ctx.quadraticCurveTo(0,26,13,14);ctx.fill();
- ctx.strokeStyle='#51352a';ctx.lineWidth=10;ctx.beginPath();ctx.moveTo(-24,8);ctx.lineTo(-40,24);ctx.moveTo(24,8);ctx.lineTo(40,24);ctx.stroke();
- ctx.strokeStyle='#c5cbd1';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(35,8);ctx.lineTo(46,-14);ctx.stroke();
+ const c=hit?'#fff':'#9a6245';ctx.save();ctx.fillStyle=c;ctx.beginPath();ctx.ellipse(0,5,33,34,0,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#5b3a30';ctx.beginPath();ctx.moveTo(-29,-14);ctx.lineTo(-42,-34);ctx.lineTo(-20,-27);ctx.lineTo(-11,-40);ctx.lineTo(0,-24);ctx.lineTo(11,-40);ctx.lineTo(20,-27);ctx.lineTo(42,-34);ctx.lineTo(29,-10);ctx.closePath();ctx.fill();
+ ctx.fillStyle='#e2bd77';ctx.beginPath();ctx.arc(-11,-3,8,0,Math.PI*2);ctx.arc(11,-3,8,0,Math.PI*2);ctx.fill();ctx.fillStyle='#16191d';ctx.beginPath();ctx.arc(-11,-2,3,0,Math.PI*2);ctx.arc(11,-2,3,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#31221e';ctx.beginPath();ctx.roundRect(-17,14,34,12,4);ctx.fill();ctx.fillStyle='#ddd';ctx.fillRect(-10,15,5,7);ctx.fillRect(2,15,5,7);
+ ctx.strokeStyle='#51352a';ctx.lineWidth=11;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(-25,8);ctx.lineTo(-45,27);ctx.moveTo(25,8);ctx.lineTo(45,27);ctx.stroke();
+ ctx.strokeStyle='#cbd3d8';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(39,8);ctx.lineTo(51,-18);ctx.stroke();ctx.restore();
 }
 function drawDemon(m,hit){
- const c=hit?'#fff':'#a84be4';
- ctx.fillStyle=c;ctx.beginPath();ctx.ellipse(0,2,29,31,0,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='#63258e';ctx.beginPath();ctx.moveTo(-22,-13);ctx.lineTo(-38,-35);ctx.lineTo(-17,-27);ctx.lineTo(-6,-43);ctx.lineTo(0,-25);ctx.lineTo(8,-43);ctx.lineTo(18,-27);ctx.lineTo(38,-35);ctx.lineTo(23,-10);ctx.closePath();ctx.fill();
- ctx.fillStyle='#ffcf4d';ctx.beginPath();ctx.arc(-10,-4,6,0,Math.PI*2);ctx.arc(10,-4,6,0,Math.PI*2);ctx.fill();ctx.fillStyle='#461052';ctx.beginPath();ctx.arc(-10,-4,2,0,Math.PI*2);ctx.arc(10,-4,2,0,Math.PI*2);ctx.fill();
- ctx.strokeStyle='#ef5a8d';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(-20,15);ctx.quadraticCurveTo(0,28,20,15);ctx.stroke();
- ctx.strokeStyle='#54256e';ctx.lineWidth=8;ctx.beginPath();ctx.moveTo(-22,9);ctx.lineTo(-40,25);ctx.moveTo(22,9);ctx.lineTo(40,25);ctx.stroke();
+ const c=hit?'#fff':'#b24be8';ctx.save();ctx.shadowBlur=8;ctx.shadowColor='#a64be0';ctx.fillStyle=c;ctx.beginPath();ctx.ellipse(0,4,32,34,0,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;
+ ctx.fillStyle='#5b2183';ctx.beginPath();ctx.moveTo(-24,-13);ctx.lineTo(-43,-39);ctx.lineTo(-20,-28);ctx.lineTo(-7,-48);ctx.lineTo(0,-27);ctx.lineTo(8,-48);ctx.lineTo(20,-28);ctx.lineTo(43,-39);ctx.lineTo(25,-9);ctx.closePath();ctx.fill();
+ ctx.fillStyle='#ffd45c';ctx.beginPath();ctx.arc(-11,-4,7,0,Math.PI*2);ctx.arc(11,-4,7,0,Math.PI*2);ctx.fill();ctx.fillStyle='#4c124f';ctx.beginPath();ctx.arc(-11,-4,2.5,0,Math.PI*2);ctx.arc(11,-4,2.5,0,Math.PI*2);ctx.fill();
+ ctx.strokeStyle='#f46c9a';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(-20,15);ctx.quadraticCurveTo(0,30,20,15);ctx.stroke();
+ ctx.strokeStyle='#54256e';ctx.lineWidth=9;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(-23,8);ctx.lineTo(-43,27);ctx.moveTo(23,8);ctx.lineTo(43,27);ctx.stroke();ctx.restore();
 }
 function drawEquipmentVisual(key,self){
  const e=state.p.equipment||{}; const item=e.item||{}; const rare=e.rarity||item.rarity||'common';
@@ -252,6 +281,14 @@ function drawHero(x,y,key,nm,self){
  if(self&&attack){ctx.save();ctx.strokeStyle='#ffe27a';ctx.lineWidth=8;ctx.shadowBlur=24;ctx.shadowColor='#ffe27a';ctx.beginPath();ctx.arc(22,-4,30,-1.2,.95);ctx.stroke();ctx.restore()}
  // V11 armor details
  ctx.save();ctx.strokeStyle='rgba(255,255,255,.55)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-13,-8);ctx.lineTo(-20,-1);ctx.moveTo(13,-8);ctx.lineTo(20,-1);ctx.stroke();ctx.fillStyle=h.color;ctx.beginPath();ctx.arc(-15,-6,6,0,Math.PI*2);ctx.arc(15,-6,6,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#d9b76a';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-11,11);ctx.lineTo(11,11);ctx.stroke();ctx.restore()
+ // V16 armor / class silhouette details
+ ctx.save();
+ if(key==='Arkan'){ctx.fillStyle='#4e6275';ctx.strokeStyle='#c8d5df';ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(-19,-8,10,13,3);ctx.roundRect(9,-8,10,13,3);ctx.fill();ctx.stroke();ctx.fillStyle='#d5e0e8';ctx.beginPath();ctx.moveTo(-12,-35);ctx.lineTo(0,-43);ctx.lineTo(12,-35);ctx.lineTo(9,-27);ctx.lineTo(-9,-27);ctx.closePath();ctx.fill();}
+ else if(key==='Doran'){ctx.fillStyle='#c99b39';ctx.strokeStyle='#ffe28a';ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(-20,-7,11,15,4);ctx.roundRect(9,-7,11,15,4);ctx.fill();ctx.stroke();ctx.fillStyle='#e7c75e';ctx.beginPath();ctx.moveTo(-10,-35);ctx.lineTo(-5,-43);ctx.lineTo(0,-38);ctx.lineTo(5,-43);ctx.lineTo(10,-35);ctx.closePath();ctx.fill();}
+ else if(key==='Luna'){ctx.strokeStyle='#d8f3ff';ctx.lineWidth=3;ctx.beginPath();ctx.arc(0,-2,21,3.4,6.0);ctx.stroke();ctx.fillStyle='#5aa8c7';ctx.beginPath();ctx.roundRect(-18,-7,8,12,3);ctx.roundRect(10,-7,8,12,3);ctx.fill();}
+ else if(key==='Elyra'){ctx.fillStyle='#6d45a4';ctx.globalAlpha=.9;ctx.beginPath();ctx.moveTo(-18,-5);ctx.lineTo(-28,19);ctx.lineTo(-13,13);ctx.lineTo(0,24);ctx.lineTo(13,13);ctx.lineTo(28,19);ctx.lineTo(18,-5);ctx.closePath();ctx.fill();ctx.globalAlpha=1;ctx.strokeStyle='#d9a6ff';ctx.lineWidth=2;ctx.beginPath();ctx.arc(0,-42,5,0,Math.PI*2);ctx.stroke();}
+ else {ctx.fillStyle='#2a2b3d';ctx.strokeStyle='#a0a7bd';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-16,-7);ctx.lineTo(-25,18);ctx.lineTo(-12,12);ctx.lineTo(0,22);ctx.lineTo(12,12);ctx.lineTo(25,18);ctx.lineTo(16,-7);ctx.closePath();ctx.fill();ctx.stroke();}
+ ctx.restore();
  drawEquipmentVisual(key,self); if(self){ctx.save();ctx.strokeStyle=h.color;ctx.globalAlpha=.28;ctx.shadowBlur=18;ctx.shadowColor=h.color;ctx.beginPath();ctx.ellipse(0,7,35,42,0,0,Math.PI*2);ctx.stroke();ctx.restore()} ctx.fillStyle='#fff';ctx.font='bold 12px Arial';ctx.textAlign='center';ctx.shadowColor='#000';ctx.shadowBlur=4;ctx.fillText(nm,0,-49);ctx.shadowBlur=0;ctx.restore();
 }
 function loop(t){const dt=Math.min(.05,(t-state.last)/1000||0);state.last=t;update(dt);draw();requestAnimationFrame(loop)}
